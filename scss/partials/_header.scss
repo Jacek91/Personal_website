@@ -1,0 +1,69 @@
+#homePage {
+  .bg_photo {
+    background-image: url("../images/bg_2.jpg");
+    height: 100vh;
+    width: 100vw;
+    background-blend-mode: multiply;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+  }
+
+  #page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 3;
+
+    .spinner {
+      width: 64px;
+      height: 64px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("../images/spinner.gif");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .left_main_page {
+    background: #121212;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+
+    .menu {
+      li {
+        .active {
+          color: #0099cc;
+        }
+        a {
+          display: block;
+          margin: 30px 10px;
+          text-align: center;
+          color: #ffffff;
+          transition: all 0.3s;
+          text-decoration: none;
+          font-family: "Source Sans Pro";
+
+          &:hover {
+            color: #0099cc;
+          }
+
+          span {
+            display: block;
+            margin: 5px auto;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}

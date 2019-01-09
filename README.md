@@ -1,2 +1,11 @@
-# Personal_website
-My personal website
+# My Resume
+
+This is my Personal website.
+
+## Built with:
+
+* HTML 
+* SASS
+* RWD
+* JavaScript
+* jQuery

@@ -1,0 +1,197 @@
+.grid {
+  position: relative;
+  clear: both;
+  margin: 0 auto;
+  padding: 0.3em 0 2em;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center;
+}
+
+/* Common style */
+
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  width: 100%;
+  /*height: auto;*/
+  height: 350px;
+  background: #3085a3;
+  text-align: center;
+  /*cursor: pointer;*/
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before, .grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption, .grid figure figcaption>a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+
+/* For some effects it will show as a button */
+
+.grid figure figcaption>a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  /* word-spacing: -0.15em; */
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2, .grid figure p, .grid figure .link {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+
+/***** Ming *****/
+
+/*---------------*/
+
+figure.effect-ming {
+  background: #030c17;
+}
+
+figure.effect-ming img {
+  opacity: 0.9;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.effect-ming figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale3d(1.4, 1.4, 1);
+  transform: scale3d(1.4, 1.4, 1);
+}
+
+figure.effect-ming h2 {
+  margin: 10% 0 10px 0;
+  /*padding: 1em 1em 0.2em 1em;*/
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  font-family: 'Abel';
+}
+
+figure.effect-ming p {
+  padding: 1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  font-family: 'Source Sans Pro';
+}
+
+figure.effect-ming .link {
+  padding: 0.4em;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  font-family: 'Source Sans Pro';
+}
+
+/*figure.effect-ming:hover h2 {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}*/
+
+figure.effect-ming:hover figcaption::before, figure.effect-ming:hover p {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+figure.effect-ming:hover figcaption::before, figure.effect-ming:hover h2 {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+figure.effect-ming:hover figcaption::before, figure.effect-ming:hover .link {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+figure.effect-ming:hover figcaption {
+  background-color: rgba(58, 52, 42, 0);
+}
+
+figure.effect-ming:hover img {
+  opacity: 0.1;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 50em) {
+  .content {
+    padding: 0 10px;
+    text-align: center;
+  }
+  .grid figure {
+    display: inline-block;
+    float: none;
+    margin: 10px auto;
+    width: 100%;
+  }
+}
