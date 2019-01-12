@@ -1,0 +1,120 @@
+#mySkills {
+  background-color: black;
+  color: #fff;
+
+  h4 {
+    margin: 30px 0 40px 0;
+    font-size: 24px;
+    font-family: "Abel";
+    text-transform: uppercase;
+  }
+
+  .section_headingBox {
+    position: relative;
+    display: inline-block;
+    margin: 65px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: "Roboto Slab";
+    .section_heading {
+      font-size: 60px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+    .section_subheading {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 24px;
+      color: #0099cc;
+      text-align: right;
+      letter-spacing: -1px;
+      font-family: "Source Sans Pro";
+    }
+
+    .section_subheading::before {
+      content: "";
+      width: 150px;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 13px;
+      left: 3px;
+    }
+  }
+
+  .left_skills {
+    padding-right: 50px;
+  }
+
+  .right_skills {
+    padding-left: 50px;
+    img {
+      margin: 20px 0;
+      border: 2px solid #424242;
+      padding: 15px;
+      background: #eee;
+      transition: all 0.3s;
+      width: 80px;
+
+      &:hover {
+        background: #0099cc;
+      }
+    }
+  }
+
+  .skill-bar {
+    span {
+      font-family: "Source Sans Pro";
+      line-height: 26px;
+    }
+
+    p {
+      float: right;
+      font-size: 11px;
+      line-height: 25px;
+    }
+
+    .skillbar {
+      font-family: "Open Sans", "sans-serif";
+      position: relative;
+      display: block;
+      margin-bottom: 15px;
+      width: 100%;
+      background: #eee;
+      height: 15px;
+    }
+
+    .skillbar-bar {
+      height: 15px;
+      width: 0;
+      background: #0099cc;
+    }
+  }
+
+  .languages {
+    padding-bottom: 70px;
+
+    .left_skills {
+      .resp {
+        background: #121212;
+        padding: 1em;
+        border: 1px solid black;
+
+        img {
+          border-right: 1px solid #424242;
+          filter: brightness(3.8);
+        }
+
+        p {
+          padding-left: 20px;
+          font-family: "Source Sans Pro";
+          line-height: 60px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

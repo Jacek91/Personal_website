@@ -82,3 +82,34 @@ window.onload = function() {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
 };
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 1500 && !$(".skill-bar").hasClass("animated")) {
+    $(".skill-bar").addClass("animated");
+    jQuery(".skillbar").each(function() {
+      jQuery(this)
+        .find(".skillbar-bar")
+        .animate(
+          {
+            width: jQuery(this).attr("data-percent")
+          },
+          2000
+        );
+    });
+  } else if (
+    $(this).scrollTop() < 1000 &&
+    $(".skill-bar").hasClass("animated")
+  ) {
+    $(".skill-bar").removeClass("animated");
+    jQuery(".skillbar").each(function() {
+      jQuery(this)
+        .find(".skillbar-bar")
+        .animate(
+          {
+            width: "0%"
+          },
+          2000
+        );
+    });
+  }
+});
