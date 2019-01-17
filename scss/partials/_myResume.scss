@@ -1,0 +1,161 @@
+#myResume {
+  $white: #ffffff;
+  $bg-color: #010101;
+  $blue: #0099cc;
+  $deep-dark-grey: #0a0a0a;
+  $dark-grey: #2f2d2d;
+  $font-color: #b7b7b7;
+  $grey: #1c1c1c;
+  background-color: black;
+  color: #fff;
+  font-family: "Source Sans Pro";
+
+  .section_headingBox {
+    position: relative;
+    display: inline-block;
+    margin: 50px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: "Roboto Slab";
+    .section_heading {
+      font-size: 60px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    .section_subheading {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 24px;
+      color: #0099cc;
+      text-align: right;
+      letter-spacing: -1px;
+    }
+
+    .section_subheading::before {
+      content: "";
+      width: 238px;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 14px;
+      left: 3px;
+    }
+  }
+
+  .resume_education {
+    position: relative;
+    margin-top: 50px;
+
+    &:after {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background-color: $dark-grey;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -1px;
+      z-index: 1;
+    }
+
+    &:before {
+      content: "";
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 41px solid $blue;
+      position: absolute;
+      left: 50%;
+      margin-left: -20px;
+      margin-top: -40px;
+      z-index: 2;
+    }
+
+    .timeline_education {
+      padding: 20px;
+
+      .left {
+        text-align: right;
+      }
+
+      h3 {
+        font-size: 20px;
+        color: $blue;
+        margin: 20px 0 10px 0;
+        font-weight: bold;
+      }
+      .education_years-right:before {
+        left: -27px;
+      }
+
+      .education_years-left {
+        right: -13px;
+      }
+
+      .education_years {
+        position: relative;
+
+        .education_year {
+          font-size: 60px;
+          font-weight: bold;
+          color: $dark-grey;
+          letter-spacing: 1px;
+          margin-right: 20px;
+        }
+      }
+
+      .date {
+        margin-top: 5px;
+        li {
+          list-style-type: disc;
+          margin-left: 16px;
+        }
+      }
+    }
+
+    .left {
+      text-align: right;
+    }
+
+    .education_years:before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border: 3px solid $white;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      margin-top: -7px;
+      z-index: 2;
+    }
+
+    .timeline_education:hover .education_year {
+      color: $blue;
+      animation-name: pulse;
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+    }
+
+    .timeline_education:hover .education_years:before {
+      background-color: $white;
+      border: 3px solid $blue;
+    }
+
+    @keyframes pulse {
+      from {
+        transform: scale3d(1, 1, 1);
+      }
+
+      50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+}

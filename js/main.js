@@ -113,3 +113,39 @@ $(window).scroll(function() {
     });
   }
 });
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 2900 && $(this).scrollTop() < 3100) {
+    $(".education_year").each(function(index, value) {
+      if (index === 0) {
+        $(this).css({
+          animation: "pulse 1s infinite",
+          color: "#0099cc"
+        });
+      }
+    });
+  } else if ($(this).scrollTop() > 3100 && $(this).scrollTop() < 3300) {
+    $(".education_year").each(function(index, value) {
+      if (index === 1) {
+        $(this).css({
+          animation: "pulse 1s infinite",
+          color: "#0099cc"
+        });
+      }
+    });
+  } else if ($(this).scrollTop() > 3300 && $(this).scrollTop() < 3400) {
+    $(".education_year").each(function(index, value) {
+      if (index === 2) {
+        $(this).css({
+          animation: "pulse 1s infinite",
+          color: "#0099cc"
+        });
+      }
+    });
+  } else if ($(this).scrollTop() < 2500 || $(this).scrollTop() > 3450) {
+    $(".education_year").css({
+      animation: "",
+      color: "#2f2d2d"
+    });
+  }
+});
