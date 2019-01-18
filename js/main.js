@@ -1,4 +1,4 @@
-$(window).on("load", function() {
+$(window).on("load", function () {
   var $preloader = $("#page-preloader"),
     $spinner = $preloader.find(".spinner");
   $spinner.delay(1000).fadeOut("slow");
@@ -24,7 +24,7 @@ $(".day").text(date.getDate());
 $(".month").text(month[date.getMonth()]);
 $(".year").text(date.getFullYear());
 
-var TxtType = function(el, toRotate, period) {
+var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -34,7 +34,7 @@ var TxtType = function(el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtType.prototype.tick = function() {
+TxtType.prototype.tick = function () {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -62,12 +62,12 @@ TxtType.prototype.tick = function() {
     delta = 500;
   }
 
-  setTimeout(function() {
+  setTimeout(function () {
     that.tick();
   }, delta);
 };
 
-window.onload = function() {
+window.onload = function () {
   var elements = document.getElementsByClassName("typewrite");
   for (var i = 0; i < elements.length; i++) {
     var toRotate = elements[i].getAttribute("data-type");
@@ -83,14 +83,13 @@ window.onload = function() {
   document.body.appendChild(css);
 };
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(this).scrollTop() > 1500 && !$(".skill-bar").hasClass("animated")) {
     $(".skill-bar").addClass("animated");
-    jQuery(".skillbar").each(function() {
+    jQuery(".skillbar").each(function () {
       jQuery(this)
         .find(".skillbar-bar")
-        .animate(
-          {
+        .animate({
             width: jQuery(this).attr("data-percent")
           },
           2000
@@ -101,11 +100,10 @@ $(window).scroll(function() {
     $(".skill-bar").hasClass("animated")
   ) {
     $(".skill-bar").removeClass("animated");
-    jQuery(".skillbar").each(function() {
+    jQuery(".skillbar").each(function () {
       jQuery(this)
         .find(".skillbar-bar")
-        .animate(
-          {
+        .animate({
             width: "0%"
           },
           2000
@@ -114,9 +112,9 @@ $(window).scroll(function() {
   }
 });
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(this).scrollTop() > 2900 && $(this).scrollTop() < 3100) {
-    $(".education_year").each(function(index, value) {
+    $(".education_year").each(function (index, value) {
       if (index === 0) {
         $(this).css({
           animation: "pulse 1s infinite",
@@ -125,7 +123,7 @@ $(window).scroll(function() {
       }
     });
   } else if ($(this).scrollTop() > 3100 && $(this).scrollTop() < 3300) {
-    $(".education_year").each(function(index, value) {
+    $(".education_year").each(function (index, value) {
       if (index === 1) {
         $(this).css({
           animation: "pulse 1s infinite",
@@ -134,7 +132,7 @@ $(window).scroll(function() {
       }
     });
   } else if ($(this).scrollTop() > 3300 && $(this).scrollTop() < 3400) {
-    $(".education_year").each(function(index, value) {
+    $(".education_year").each(function (index, value) {
       if (index === 2) {
         $(this).css({
           animation: "pulse 1s infinite",
@@ -148,4 +146,24 @@ $(window).scroll(function() {
       color: "#2f2d2d"
     });
   }
+});
+
+var buttons = $("#myProjects .buttons a");
+
+buttons.click(function(e) {
+  e.preventDefault();
+  buttons.each(function() {
+    $(this).removeClass("activeBtn");
+  });
+  var btn = $(this);
+  btn.addClass("activeBtn");
+  var a = btn.attr("href");
+  a = a.substr(1);
+  $("figure").each(function() {
+    if (!$(this).hasClass(a) && a != "all") {
+      $(this).addClass("hide");
+    } else {
+      $(this).removeClass("hide");
+    }
+  });
 });
