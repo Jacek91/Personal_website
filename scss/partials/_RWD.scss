@@ -1,0 +1,1188 @@
+$fullhd: "(min-width: 1920px)";
+$desktopLarge: "(max-width: 1919px)";
+$desktop: "(max-width: 1600px)";
+$largeTablet: "(min-width: 960px) and (max-width: 1279px)";
+$tablet: "(min-width: 720px) and (max-width: 959px)";
+$mobile: "(min-width: 480px) and (max-width: 719px)";
+$smallMobile: "(max-width: 479px)";
+
+@media #{$desktop},
+#{$desktopLarge},
+#{$fullhd} {
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            float: left;
+            width: (100% * ($i/12));
+            min-height: 1px;
+        }
+    }
+}
+
+@media #{$largeTablet},
+#{$tablet} {
+    @for $i from 1 through 8 {
+        .m-col-#{$i} {
+            float: left;
+            width: (100% * ($i/8));
+            min-height: 1px;
+        }
+    }
+}
+
+@media #{$mobile},
+#{$smallMobile} {
+    @for $i from 1 through 2 {
+        .s-col-#{$i} {
+            float: left;
+            width: (100% * ($i/2));
+            min-height: 1px;
+        }
+    }
+}
+
+@media #{$fullhd} {
+    #homePage {
+        font-size: 18px;
+
+        .middle_main_page {
+            left: 34%;
+        }
+    }
+
+    .calendar {
+        margin-left: 35px;
+    }
+
+    #aboutMe {
+        font-size: 18px;
+
+        .left_info {
+            a {
+                font-size: 18px;
+            }
+        }
+    }
+
+    #myResume {
+        font-size: 18px;
+    }
+
+    #contactMe {
+        font-size: 18px;
+
+        .contact_right {
+            .contact_details {
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .contact_left {
+            button {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media #{$desktopLarge} {
+    #homePage {
+        .middle_main_page {
+            left: 32%;
+        }
+
+        .calendar {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media #{$desktop} {
+    #homePage {
+        .middle_main_page {
+            left: 27%;
+        }
+
+        .calendar {
+            margin-left: 0px;
+        }
+    }
+
+    #aboutMe {
+        p {
+            margin-left: 35px;
+        }
+
+        .left_info {
+            a {
+                margin-left: 35px;
+            }
+
+            .quote {
+                margin-left: 35px;
+            }
+
+            .social_icons {
+                margin-top: 30px;
+
+                li {
+                    &+li {
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    #mySkills {
+        .left_skills {
+            h4 {
+                margin-left: 35px;
+            }
+
+            .resp {
+                margin-left: 35px;
+            }
+        }
+    }
+
+    #contactMe {
+        .contact_left {
+            padding-left: 35px;
+        }
+    }
+}
+
+@media #{$largeTablet} {
+    #homePage {
+        .middle_main_page {
+            left: 21%;
+        }
+
+        .calendar {
+            margin-left: -15px;
+        }
+    }
+
+    #aboutMe {
+        .about_me_info {
+            margin-left: 70px;
+            padding-right: 5px;
+        }
+
+        .section_headingBox {
+            margin-bottom: 50px;
+        }
+
+        .right_info {
+            width: 400px;
+            float: right;
+            margin-right: 70px;
+
+            .my_photo {
+                height: 550px;
+                width: 400px;
+            }
+        }
+
+        .left_info {
+            margin-left: 70px;
+
+            a {
+                font-size: 14px;
+                line-height: 25px;
+            }
+
+            .quote {
+                padding: 11px;
+            }
+        }
+    }
+
+    #mySkills {
+        .left_skills {
+            margin-left: 100px;
+
+            h4 {
+                margin-left: 0;
+            }
+
+            .resp {
+                margin-left: 0;
+            }
+        }
+
+        .right_skills {
+            padding-left: 0;
+            padding-right: 50px;
+
+            .img_box {
+                margin-right: 25px;
+            }
+        }
+    }
+
+    #myResume {
+        .resume_education {
+            .timeline_education {
+                h3 {}
+            }
+
+            .date {
+                font-size: 14px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    #myProjects {
+        .left_projects {
+            padding-right: 0;
+
+            figure {
+                float: right;
+            }
+        }
+
+        .grid {
+            figure {
+                max-width: 350px;
+                max-height: 300px;
+            }
+        }
+    }
+
+    #contactMe {
+        .contact_left {
+            padding-left: 100px;
+
+            form {
+                margin-top: 10px;
+            }
+        }
+
+        .contact_right {
+            padding-right: 70px;
+
+            .contact_details {
+                margin-top: 23px;
+            }
+        }
+    }
+}
+
+@media #{$tablet} {
+    #homePage {
+        .menu {
+            a {
+                font-size: 14px;
+
+                span {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .middle_main_page {
+            font-size: 14px;
+            left: 25%;
+
+            .main_text {
+                .home {
+                    width: 450px;
+
+                    h1 {
+                        font-size: 32px;
+                    }
+
+                    em {
+                        font-size: 16px;
+                    }
+
+                    .home_button {
+                        margin-top: 20px;
+
+                        a {
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .calendar {
+            margin-left: -35px;
+        }
+    }
+
+    #aboutMe {
+        font-size: 14px;
+
+        .about_me_info {
+            margin-left: 70px;
+            padding-right: 30px;
+        }
+
+        .section_headingBox {
+            margin-bottom: 50px;
+        }
+
+        .right_info {
+            width: 300px;
+            float: right;
+            margin-right: 55px;
+
+            .my_photo {
+                height: 500px;
+                width: 300px;
+            }
+        }
+
+        .left_info {
+            margin-left: 70px;
+
+            a {
+                font-size: 14px;
+                line-height: 25px;
+            }
+
+            .social_icons {
+                li {
+                    .fa {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            .quote {
+                padding: 2px;
+                font-size: 12px;
+
+                em {
+                    font-size: 14px;
+                }
+
+                p {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+
+    #mySkills {
+        .left_skills {
+            margin-left: 90px;
+
+            h4 {
+                margin-left: 0;
+            }
+        }
+
+        .right_skills {
+            padding-left: 0;
+
+            .img_box {
+                margin-right: 25px;
+                width: 20%;
+
+                img {
+                    padding: 5px;
+                }
+            }
+        }
+
+        .languages {
+            .left_skills {
+                .resp {
+                    margin-left: 0;
+                    padding: 5px;
+
+                    p {
+                        line-height: 50px;
+                    }
+
+                    img {
+                        margin-top: 7px;
+                    }
+                }
+            }
+
+            .right_skills {
+                padding-right: 55px;
+            }
+        }
+    }
+
+    #myResume {
+        .resume_education {
+            .left {
+                margin-left: 10px;
+            }
+
+            .timeline_education {
+                h3 {}
+            }
+
+            .date {
+                font-size: 14px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    #myProjects {
+        .buttons {
+            a {
+                padding: 5px 10px;
+            }
+        }
+
+        .left_projects {
+            padding-right: 0;
+
+            figure {
+                float: right;
+            }
+        }
+
+        .right_projects {
+            figure {
+                float: left;
+            }
+        }
+
+        .grid {
+            figure {
+                min-width: 200px;
+                max-width: 250px;
+                max-height: 250px;
+            }
+        }
+    }
+
+    #contactMe {
+        .contact_left {
+            padding-left: 100px;
+            font-size: 12px;
+
+            form {
+                margin-top: 0px;
+            }
+        }
+
+        .contact_right {
+            padding-right: 70px;
+
+            .contact_details {
+                margin-top: 13px;
+                margin-left: 50px;
+                height: 423px;
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$mobile} {
+    #homePage {
+        .left_main_page {
+            left: -100%;
+            width: 100vw;
+            z-index: 3;
+
+            .menu {
+                margin-top: 65px;
+
+                li {
+                    a {
+                        font-size: 18px;
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar {
+            top: 40%;
+            right: 3%;
+
+            .progress_count {
+                font-size: 12px;
+            }
+        }
+
+        .header_iconScroll {
+            position: absolute;
+            top: 115%;
+            right: -50%;
+        }
+
+        .mobile_menu {
+            display: block;
+
+            .hamburger {
+                left: 5%;
+                top: 3%;
+            }
+        }
+
+        .middle_main_page {
+            top: 44vw;
+            left: 10vw;
+
+            .main_text {
+                .home {
+                    width: 400px;
+
+                    h1 {
+                        font-size: 30px;
+                    }
+
+                    em {
+                        width: 400px;
+                        font-size: 15px;
+                    }
+
+                    p {
+                        line-height: 20px;
+                    }
+
+                    .home_button {
+                        margin-top: 10px;
+
+                        a {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right_main_page {
+            left: 85vw;
+
+            .calendar {
+                margin-top: 65px;
+                width: 70px;
+                height: 97px;
+
+                .month {
+                    font-size: 20px;
+                    line-height: 20px;
+                    margin-bottom: 0;
+                }
+
+                .day {
+                    font-size: 40px;
+                    line-height: 32px;
+                }
+
+                .year {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    #aboutMe {
+        font-size: 14px;
+
+        .about_me_info {
+            padding: 30px;
+        }
+
+        .section_headingBox {
+            margin-bottom: 50px;
+        }
+
+        p {
+            margin-left: 0px;
+        }
+
+        .left_info {
+            margin-top: 10px;
+
+            a {
+                font-size: 14px;
+                line-height: 25px;
+                padding-left: 30px;
+                margin-left: 0;
+            }
+
+            .social_icons {
+                li {
+                    .fa {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            .quote {
+                padding: 20px;
+                font-size: 16px;
+                margin: 30px 30px;
+
+                em {
+                    font-size: 18px;
+                }
+
+                p {
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        .right_info {
+            margin-top: 20px;
+            margin-bottom: 0px;
+
+            .my_photo {
+                float: none;
+                margin: 0 30px;
+                width: auto;
+            }
+        }
+    }
+
+    #mySkills {
+        h4 {
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .left_skills {
+            padding-right: 0;
+            margin-left: 30px;
+            width: 94%;
+
+            h4 {
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            .skill-bar {
+                margin-right: 30px;
+            }
+        }
+
+        .right_skills {
+            padding-left: 0;
+
+            .img_box {
+                margin-left: 60px;
+                width: 20%;
+
+                img {
+                    padding: 5px;
+                }
+            }
+        }
+
+        .languages {
+            .left_skills {
+                .resp {
+                    margin-left: 0;
+                    margin-right: 30px;
+                    padding: 5px;
+
+                    p {
+                        line-height: 75px;
+                    }
+
+                    img {
+                        margin-top: 7px;
+                    }
+                }
+            }
+
+            .right_skills {
+                padding-right: 30px;
+                padding-left: 30px;
+
+                h4 {
+                    margin-top: 40px;
+                    margin-left: 0px;
+                }
+            }
+
+            h4 {
+                margin-top: 20px;
+            }
+
+            padding-bottom: 0;
+        }
+    }
+
+    #myResume {
+        .section_headingBox {
+            margin-top: 65px;
+        }
+
+        .resume_education {
+            .left {
+                margin-left: 10px;
+            }
+
+            .timeline_education {
+                h3 {
+                    font-size: 16px;
+                }
+            }
+
+            .date {
+                font-size: 14px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    #myProjects {
+        padding-bottom: 50px;
+
+        .section_headingBox {
+            margin-top: 50px;
+        }
+
+        .buttons {
+            a {
+                padding: 9px 13px;
+            }
+        }
+
+        .right_projects {
+            padding: 0;
+            margin: 0;
+        }
+
+        .left_projects {
+            padding: 0;
+            margin: 0;
+        }
+
+        .grid {
+            margin-bottom: -35px;
+
+            figure {
+                min-width: 200px;
+                max-width: 350px;
+                max-height: 350px;
+            }
+        }
+    }
+
+    #contactMe {
+        .section_headingBox {
+            margin-top: 50px;
+        }
+
+        .contact_left {
+            font-size: 14px;
+            padding-right: 30px;
+
+            form {
+                margin-top: 0px;
+            }
+        }
+
+        .contact_right {
+            .contact_details {
+                margin-top: 50px;
+                margin-left: 35px;
+                margin-right: 30px;
+                height: 423px;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$smallMobile} {
+    #homePage {
+        .left_main_page {
+            left: -100%;
+            width: 100vw;
+            z-index: 3;
+
+            .menu {
+                margin-top: 65px;
+
+                li {
+                    a {
+                        font-size: 18px;
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar {
+            display: none;
+        }
+
+        .header_iconScroll {
+            position: absolute;
+            top: 115%;
+            right: -75%;
+        }
+
+        .mobile_menu {
+            display: block;
+
+            .hamburger {
+                left: 8%;
+                top: 2%;
+            }
+        }
+
+        .middle_main_page {
+            top: 50vw;
+            left: 10vw;
+
+            .main_text {
+                .home {
+                    width: 290px;
+
+                    h1 {
+                        font-size: 24px;
+                    }
+
+                    em {
+                        width: 290px;
+                        font-size: 11px;
+                    }
+
+                    p {
+                        line-height: 25px;
+                    }
+
+                    .home_button {
+                        margin-top: 10px;
+
+                        a {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right_main_page {
+            left: 83vw;
+
+            .calendar {
+                margin-top: 60px;
+                width: 58px;
+                height: 95px;
+
+                .month {
+                    font-size: 18px;
+                    line-height: 20px;
+                    margin-bottom: 0;
+                }
+
+                .day {
+                    font-size: 30px;
+                    line-height: 32px;
+                }
+
+                .year {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    #aboutMe {
+        .section_headingBox {
+            margin-bottom: 30px;
+
+            .section_heading {
+                font-size: 45px;
+            }
+
+            .section_subheading {
+                &::before {
+                    width: 125px;
+                }
+            }
+        }
+
+        .about_me_info {
+            p {
+                margin: 0;
+                padding: 0 20px;
+            }
+        }
+
+        .left_info {
+            margin-top: 20px;
+
+            a {
+                font-size: 14px;
+                line-height: 25px;
+                padding-left: 30px;
+                margin-left: 0;
+            }
+
+            .social_icons {
+                li {
+                    .fa {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            .quote {
+                padding: 20px;
+                font-size: 16px;
+                margin: 30px 30px;
+
+                em {
+                    font-size: 18px;
+                }
+
+                p {
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        .right_info {
+            margin-top: 20px;
+            margin-bottom: 0px;
+
+            .my_photo {
+                float: none;
+                margin: 0 30px;
+                width: auto;
+            }
+        }
+    }
+
+    #mySkills {
+        .section_headingBox {
+            .section_heading {
+                font-size: 45px;
+            }
+
+            .section_subheading {
+                &::before {
+                    width: 75px;
+                }
+            }
+        }
+
+        h4 {
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .left_skills {
+            padding-right: 0;
+            margin-left: 30px;
+            width: 90%;
+
+            h4 {
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            .skill-bar {
+                margin-right: 30px;
+            }
+        }
+
+        .right_skills {
+            padding-left: 0;
+
+            .img_box {
+                margin-left: 75px;
+                width: 20%;
+
+                img {
+                    padding: 5px;
+                }
+            }
+        }
+
+        .languages {
+            .left_skills {
+                .resp {
+                    margin-left: 0;
+                    margin-right: 30px;
+                    padding: 5px;
+
+                    p {
+                        line-height: 75px;
+                    }
+
+                    img {
+                        margin-top: 7px;
+                    }
+                }
+            }
+
+            .right_skills {
+                padding-right: 30px;
+                padding-left: 30px;
+
+                h4 {
+                    margin-top: 40px;
+                    margin-left: 0px;
+                }
+            }
+
+            h4 {
+                margin-top: 20px;
+            }
+
+            padding-bottom: 0;
+        }
+    }
+
+    #myResume {
+        .section_headingBox {
+            margin-top: 65px;
+
+            .section_heading {
+                font-size: 45px;
+            }
+
+            .section_subheading {
+                &::before {
+                    width: 145px;
+                }
+            }
+        }
+
+        .resume_education {
+            .left {
+                margin-left: 10px;
+            }
+
+            .timeline_education {
+                h3 {
+                    font-size: 16px;
+                }
+            }
+
+            .date {
+                font-size: 14px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    #myProjects {
+        padding-bottom: 50px;
+
+        .section_headingBox {
+            margin-top: 50px;
+            margin-bottom: 20px;
+
+            .section_heading {
+                font-size: 45px;
+            }
+
+            .section_subheading {
+                &::before {
+                    width: 195px;
+                }
+            }
+        }
+
+        .buttons {
+            width: 60%;
+            margin: 0 auto;
+
+            a {
+                padding: 15px 13px;
+                display: block;
+
+                &+a {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .right_projects {
+            padding: 0;
+            margin: 0;
+        }
+
+        .left_projects {
+            padding: 0;
+            margin: 0;
+        }
+
+        .grid {
+            margin-bottom: -35px;
+
+            figure {
+                min-width: 200px;
+                max-width: 350px;
+                max-height: 350px;
+            }
+        }
+    }
+
+    #contactMe {
+        .section_headingBox {
+            margin-top: 50px;
+            margin-bottom: 30px;
+
+            .section_heading {
+                font-size: 45px;
+            }
+
+            .section_subheading {
+                &::before {
+                    width: 115px;
+                }
+            }
+        }
+
+        .contact_left {
+            font-size: 14px;
+            padding-right: 30px;
+
+            form {
+                margin-top: 0px;
+            }
+        }
+
+        .contact_right {
+            .contact_details {
+                margin-top: 50px;
+                margin-left: 35px;
+                margin-right: 30px;
+                height: 423px;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
