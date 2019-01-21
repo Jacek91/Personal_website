@@ -512,7 +512,7 @@ $smallMobile: "(max-width: 479px)";
         }
 
         .navbar {
-            top: 40%;
+            top: 50%;
             right: 3%;
 
             .progress_count {
@@ -834,12 +834,18 @@ $smallMobile: "(max-width: 479px)";
         }
 
         .navbar {
-            display: none;
+            top: 51%;
+            right: 3%;
+
+            .progress_count {
+                font-size: 8px;
+                left: -5px;
+            }
         }
 
         .header_iconScroll {
             position: absolute;
-            top: 115%;
+            top: 105%;
             right: -75%;
         }
 
@@ -1141,8 +1147,8 @@ $smallMobile: "(max-width: 479px)";
 
             figure {
                 min-width: 200px;
-                max-width: 350px;
-                max-height: 350px;
+                max-width: 320px;
+                max-height: 320px;
             }
         }
     }

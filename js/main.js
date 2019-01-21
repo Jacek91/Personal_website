@@ -95,8 +95,15 @@ window.onload = function() {
   document.body.appendChild(css);
 };
 
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
+
 $(window).scroll(function() {
-  if ($(this).scrollTop() > 1500 && !$(".skill-bar").hasClass("animated")) {
+  var percentageScrollTop = $(window).scrollTop();
+  if (isMobile) {
+    percentageScrollTop-=800;
+  }
+  if (percentageScrollTop > 1500 && !$(".skill-bar").hasClass("animated")) {
     $(".skill-bar").addClass("animated");
     jQuery(".skillbar").each(function() {
       jQuery(this)
@@ -108,10 +115,7 @@ $(window).scroll(function() {
           2000
         );
     });
-  } else if (
-    $(this).scrollTop() < 1000 &&
-    $(".skill-bar").hasClass("animated")
-  ) {
+  } else if (percentageScrollTop < 1000 && $(".skill-bar").hasClass("animated")) {
     $(".skill-bar").removeClass("animated");
     jQuery(".skillbar").each(function() {
       jQuery(this)
@@ -126,41 +130,48 @@ $(window).scroll(function() {
   }
 });
 
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 2600 && $(this).scrollTop() < 2800) {
-    $(".education_year").each(function(index, value) {
-      if (index === 0) {
-        $(this).css({
-          animation: "pulse 1s infinite",
-          color: "#0099cc"
-        });
-      }
-    });
-  } else if ($(this).scrollTop() > 2800 && $(this).scrollTop() < 3100) {
-    $(".education_year").each(function(index, value) {
-      if (index === 1) {
-        $(this).css({
-          animation: "pulse 1s infinite",
-          color: "#0099cc"
-        });
-      }
-    });
-  } else if ($(this).scrollTop() > 3100 && $(this).scrollTop() < 3300) {
-    $(".education_year").each(function(index, value) {
-      if (index === 2) {
-        $(this).css({
-          animation: "pulse 1s infinite",
-          color: "#0099cc"
-        });
-      }
-    });
-  } else if ($(this).scrollTop() < 2500 || $(this).scrollTop() > 3450) {
-    $(".education_year").css({
-      animation: "",
-      color: "#2f2d2d"
-    });
-  }
-});
+  $(window).scroll(function() {
+    var animationScrollTop = $(window).scrollTop();
+    if (!isMobile) {
+      animationScrollTop+=1000;
+    }
+    if (animationScrollTop > 3700 && animationScrollTop < 4100) {
+      $(".education_year").each(function(index, value) {
+        if (index === 0) {
+          $(this).css({
+            animation: "pulse 1s infinite",
+            color: "#0099cc"
+          });
+        }
+      });
+    } 
+    else if (animationScrollTop > 4100 && animationScrollTop < 4300) {
+      $(".education_year").each(function(index, value) {
+        if (index === 1) {
+          $(this).css({
+            animation: "pulse 1s infinite",
+            color: "#0099cc"
+          });
+        }
+      });
+    } 
+    else if (animationScrollTop > 4300 && animationScrollTop < 4600) {
+      $(".education_year").each(function(index, value) {
+        if (index === 2) {
+          $(this).css({
+            animation: "pulse 1s infinite",
+            color: "#0099cc"
+          });
+        }
+      });
+    } 
+    else if (animationScrollTop < 4700 || animationScrollTop > 3500) {
+      $(".education_year").css({
+        animation: "",
+        color: "#2f2d2d"
+      });
+    }
+  });
 
 var buttons = $("#myProjects .buttons a");
 
@@ -195,7 +206,7 @@ function progress() {
       backgroundColor: $bgColor
     });
 
-  $(".progress_count").html(Math.round(progress * 0.8) + "%");
+  $(".progress_count").html(Math.round(progress * 0.803) + "%");
 }
 
 progress();
