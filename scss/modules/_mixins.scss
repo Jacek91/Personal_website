@@ -1,0 +1,37 @@
+@mixin headline ($beforeWidth, $beforeBottom, $beforeLeft ) {
+    .section_headingBox {
+        position: relative;
+        display: inline-block;
+        margin: 65px 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        font-family: "Roboto Slab";
+        .section_heading {
+          font-size: 60px;
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: 1px;
+          color: $fontWhite;
+        }
+        .section_subheading {
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 24px;
+          color: $mainColor;
+          text-align: right;
+          letter-spacing: -1px;
+          font-family: "Source Sans Pro";
+        }
+    
+        .section_subheading::before {
+          content: "";
+          width: $beforeWidth;
+          height: 2px;
+          background-color: $bgWhite;
+          position: absolute;
+          bottom: $beforeBottom;
+          left: $beforeLeft;
+        }
+      }
+  }

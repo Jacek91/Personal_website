@@ -17,7 +17,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background: #000;
+    background: $background;
     z-index: 3;
 
     .spinner {
@@ -33,7 +33,7 @@
   }
 
   .mobile_menu {
-    background: black;
+    background: $background;
     width: 100vw;
     height: 55px;
     position: fixed;
@@ -102,7 +102,7 @@
   }
 
   .left_main_page {
-    background: #121212;
+    background: $bgcolor;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -110,7 +110,7 @@
 
     &.animation {
       left: 0;
-      background: #121212;
+      background: $bgcolor;
       height: 100vh;
       position: fixed;
       top: 0;
@@ -120,20 +120,20 @@
     .menu {
       li {
         .active {
-          color: #0099cc;
+          color: $mainColor;
         }
 
         a {
           display: block;
           margin: 30px 10px;
           text-align: center;
-          color: #ffffff;
+          color: $fontWhite;
           transition: all 0.3s;
           text-decoration: none;
           font-family: "Source Sans Pro";
 
           &:hover {
-            color: #0099cc;
+            color: $mainColor;
           }
 
           span {
@@ -158,8 +158,8 @@
         h1 {
           font-size: 42px;
           font-family: "Roboto Slab";
-          border-bottom: 1px solid #ffffff;
-          color: white;
+          border-bottom: 1px solid $fontWhite;
+          color: $fontWhite;
           text-align: left;
         }
 
@@ -167,13 +167,13 @@
           display: block;
           font-size: 20px;
           text-align: right;
-          color: white;
+          color: $fontWhite;
           font-family: "Courgette";
         }
 
         p {
           margin-top: 30px;
-          color: #ffffff;
+          color: $fontWhite;
           line-height: 30px;
           font-family: "Source Sans Pro";
         }
@@ -186,8 +186,8 @@
             display: inline-block;
             padding: 15px;
             background: rgba(0, 0, 0, 0.3);
-            color: #ffffff;
-            border: 1px solid #ffffff;
+            color: $fontWhite;
+            border: 1px solid $fontWhite;
             transition: all 0.3s;
             text-decoration: none;
             font-size: 20px;
@@ -212,8 +212,8 @@
       margin-top: 30px;
       font-family: "Bree Serif";
       text-align: center;
-      color: #ffffff;
-      border: 2px solid #ffffff;
+      color: $fontWhite;
+      border: 2px solid $fontWhite;
       padding: 10px;
 
       .month {
@@ -248,7 +248,7 @@
       height: 100%;
       text-align: center;
       line-height: 100px;
-      color: #fff;
+      color: $fontWhite;
       font-family: "Bree Serif";
     }
 
@@ -258,7 +258,7 @@
       margin-left: -2px;
       width: 3px;
       height: 124%;
-      background-color: #fff;
+      background-color: $bgWhite;
     }
 
     .progress-bar--incIntroduction {
@@ -317,32 +317,6 @@
       background: rgba(255, 255, 255, 0.8);
       animation: mouse-wheel 1.2s ease infinite;
       border-radius: 50%;
-    }
-  }
-
-  @keyframes mouse-wheel {
-    0% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    100% {
-      opacity: 0;
-      transform: translateY(6px);
-    }
-  }
-
-  @keyframes mouse-scroll {
-    0% {
-      opacity: 0;
-    }
-
-    50% {
-      opacity: 0.5;
-    }
-
-    100% {
-      opacity: 1;
     }
   }
 }

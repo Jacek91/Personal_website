@@ -1,7 +1,7 @@
 #footer {
-    background-color: black;
+    background-color: $background;
     font-family: "Source Sans Pro";
-    color: #fff;
+    color: $fontWhite;
 
     .footer-content {
         text-align: center;
@@ -18,12 +18,12 @@
             margin-top: 10px;
 
             i {
-                color: #fff;
+                color: $fontWhite;
                 font-size: 24px;
                 margin-left: 15px;
 
                 &:hover {
-                    color: #0099cc;
+                    color: $mainColor;
                     transition: all 0.3s ease-in-out;
                 }
             }

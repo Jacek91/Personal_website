@@ -1,6 +1,6 @@
 #mySkills {
-  background-color: black;
-  color: #fff;
+  background-color: $background;
+  color: $bgWhite;
 
   h4 {
     margin: 30px 0 40px 0;
@@ -9,41 +9,7 @@
     text-transform: uppercase;
   }
 
-  .section_headingBox {
-    position: relative;
-    display: inline-block;
-    margin: 65px 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
-    font-family: "Roboto Slab";
-    .section_heading {
-      font-size: 60px;
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: #fff;
-    }
-    .section_subheading {
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 24px;
-      color: #0099cc;
-      text-align: right;
-      letter-spacing: -1px;
-      font-family: "Source Sans Pro";
-    }
-
-    .section_subheading::before {
-      content: "";
-      width: 150px;
-      height: 2px;
-      background-color: #fff;
-      position: absolute;
-      bottom: 13px;
-      left: 3px;
-    }
-  }
+  @include headline(150px, 15px, 3px);
 
   .left_skills {
     padding-right: 50px;
@@ -51,16 +17,17 @@
 
   .right_skills {
     padding-left: 50px;
+
     img {
       margin: 20px 0;
-      border: 2px solid #424242;
+      border: 2px solid $borderGrey;
       padding: 15px;
-      background: #eee;
+      background: $bgSkills;
       transition: all 0.3s;
       width: 80px;
 
       &:hover {
-        background: #0099cc;
+        background: $mainColor;
       }
     }
   }
@@ -83,14 +50,14 @@
       display: block;
       margin-bottom: 15px;
       width: 100%;
-      background: #eee;
+      background: $bgSkills;
       height: 15px;
     }
 
     .skillbar-bar {
       height: 15px;
       width: 0;
-      background: #0099cc;
+      background: $mainColor;
     }
   }
 
@@ -99,12 +66,12 @@
 
     .left_skills {
       .resp {
-        background: #121212;
+        background: $bgcolor;
         padding: 1em;
-        border: 1px solid black;
+        border: 1px solid $borderBlack;
 
         img {
-          border-right: 1px solid #424242;
+          border-right: 1px solid $borderImg;
           filter: brightness(3.8);
         }
 

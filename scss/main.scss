@@ -1,8 +1,9 @@
-@import './modules/fonts';
+@import './modules/animations';
 @import '../font-awesome-4.6.3/scss/font-awesome.scss';
+@import './modules/base';
+@import './modules/colors';
+@import './modules/fonts';
 @import './modules/mixins';
-@import './modules/vars';
-@import './partials/base';
 @import './partials/header';
 @import './partials/KnowMe';
 @import './partials/mySkills';

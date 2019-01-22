@@ -1,42 +1,30 @@
-$(window).on("load", function() {
+$(window).on("load", function () {
   var $preloader = $("#page-preloader"),
-    $spinner = $preloader.find(".spinner");
+  $spinner = $preloader.find(".spinner");
   $spinner.delay(1000).fadeOut("slow");
   $preloader.delay(1500).fadeOut("slow");
 });
 
-$(".hamburger").on("click", function() {
+$(".hamburger").on("click", function () {
   $(this).toggleClass("opened");
   $(this).toggleClass("left");
   $(".left_main_page").toggleClass("animation");
 });
 
-$(".menu li a").on("click", function() {
+$(".menu li a").on("click", function () {
   $(".left_main_page").toggleClass("animation");
   $(".hamburger").toggleClass("opened");
   $(".hamburger").toggleClass("left");
 });
 
-var month = new Array();
-month[0] = "JAN";
-month[1] = "FEB";
-month[2] = "MAR";
-month[3] = "APR";
-month[4] = "MAY";
-month[5] = "JUN";
-month[6] = "JUL";
-month[7] = "AUG";
-month[8] = "SEP";
-month[9] = "OCT";
-month[10] = "NOV";
-month[11] = "DEC";
-
+var month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 var date = new Date();
+
 $(".day").text(date.getDate());
 $(".month").text(month[date.getMonth()]);
 $(".year").text(date.getFullYear());
 
-var TxtType = function(el, toRotate, period) {
+var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -46,7 +34,7 @@ var TxtType = function(el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtType.prototype.tick = function() {
+TxtType.prototype.tick = function () {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -74,12 +62,12 @@ TxtType.prototype.tick = function() {
     delta = 500;
   }
 
-  setTimeout(function() {
+  setTimeout(function () {
     that.tick();
   }, delta);
 };
 
-window.onload = function() {
+window.onload = function () {
   var elements = document.getElementsByClassName("typewrite");
   for (var i = 0; i < elements.length; i++) {
     var toRotate = elements[i].getAttribute("data-type");
@@ -98,18 +86,17 @@ window.onload = function() {
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   var percentageScrollTop = $(window).scrollTop();
   if (isMobile) {
-    percentageScrollTop-=800;
+    percentageScrollTop -= 800;
   }
   if (percentageScrollTop > 1500 && !$(".skill-bar").hasClass("animated")) {
     $(".skill-bar").addClass("animated");
-    jQuery(".skillbar").each(function() {
+    jQuery(".skillbar").each(function () {
       jQuery(this)
         .find(".skillbar-bar")
-        .animate(
-          {
+        .animate({
             width: jQuery(this).attr("data-percent")
           },
           2000
@@ -117,11 +104,10 @@ $(window).scroll(function() {
     });
   } else if (percentageScrollTop < 1000 && $(".skill-bar").hasClass("animated")) {
     $(".skill-bar").removeClass("animated");
-    jQuery(".skillbar").each(function() {
+    jQuery(".skillbar").each(function () {
       jQuery(this)
         .find(".skillbar-bar")
-        .animate(
-          {
+        .animate({
             width: "0%"
           },
           2000
@@ -130,61 +116,58 @@ $(window).scroll(function() {
   }
 });
 
-  $(window).scroll(function() {
-    var animationScrollTop = $(window).scrollTop();
-    if (!isMobile) {
-      animationScrollTop+=1000;
-    }
-    if (animationScrollTop > 3700 && animationScrollTop < 4100) {
-      $(".education_year").each(function(index, value) {
-        if (index === 0) {
-          $(this).css({
-            animation: "pulse 1s infinite",
-            color: "#0099cc"
-          });
-        }
-      });
-    } 
-    else if (animationScrollTop > 4100 && animationScrollTop < 4300) {
-      $(".education_year").each(function(index, value) {
-        if (index === 1) {
-          $(this).css({
-            animation: "pulse 1s infinite",
-            color: "#0099cc"
-          });
-        }
-      });
-    } 
-    else if (animationScrollTop > 4300 && animationScrollTop < 4600) {
-      $(".education_year").each(function(index, value) {
-        if (index === 2) {
-          $(this).css({
-            animation: "pulse 1s infinite",
-            color: "#0099cc"
-          });
-        }
-      });
-    } 
-    else if (animationScrollTop < 4700 || animationScrollTop > 3500) {
-      $(".education_year").css({
-        animation: "",
-        color: "#2f2d2d"
-      });
-    }
-  });
+$(window).scroll(function () {
+  var animationScrollTop = $(window).scrollTop();
+  if (!isMobile) {
+    animationScrollTop += 1000;
+  }
+  if (animationScrollTop > 3700 && animationScrollTop < 4100) {
+    $(".education_year").each(function (index, value) {
+      if (index === 0) {
+        $(this).css({
+          animation: "pulse 1s infinite",
+          color: "#0099cc"
+        });
+      }
+    });
+  } else if (animationScrollTop > 4100 && animationScrollTop < 4300) {
+    $(".education_year").each(function (index, value) {
+      if (index === 1) {
+        $(this).css({
+          animation: "pulse 1s infinite",
+          color: "#0099cc"
+        });
+      }
+    });
+  } else if (animationScrollTop > 4300 && animationScrollTop < 4600) {
+    $(".education_year").each(function (index, value) {
+      if (index === 2) {
+        $(this).css({
+          animation: "pulse 1s infinite",
+          color: "#0099cc"
+        });
+      }
+    });
+  } else if (animationScrollTop < 4700 || animationScrollTop > 3500) {
+    $(".education_year").css({
+      animation: "",
+      color: "#2f2d2d"
+    });
+  }
+});
 
 var buttons = $("#myProjects .buttons a");
 
-buttons.click(function(e) {
+buttons.click(function (e) {
   e.preventDefault();
-  buttons.each(function() {
+  buttons.each(function () {
     $(this).removeClass("activeBtn");
   });
   var btn = $(this);
   btn.addClass("activeBtn");
   var a = btn.attr("href");
   a = a.substr(1);
-  $("figure").each(function() {
+  $("figure").each(function () {
     if (!$(this).hasClass(a) && a != "all") {
       $(this).addClass("hide");
     } else {
@@ -217,7 +200,7 @@ var menu_selector = ".menu";
 
 function onScroll() {
   var scroll_top = $(document).scrollTop();
-  $(menu_selector + " a").each(function() {
+  $(menu_selector + " a").each(function () {
     var hash = $(this).attr("href");
     var target = $(hash);
     if (
@@ -232,10 +215,10 @@ function onScroll() {
   });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   $(document).on("scroll", onScroll);
 
-  $(" .menu a[href^=#]").click(function(e) {
+  $(" .menu a[href^=#]").click(function (e) {
     e.preventDefault();
 
     $(menu_selector + " a.active").removeClass("active");
@@ -243,12 +226,11 @@ $(document).ready(function() {
     var hash = $(this).attr("href");
     var target = $(hash);
 
-    $("html, body").animate(
-      {
+    $("html, body").animate({
         scrollTop: target.offset().top
       },
       500,
-      function() {
+      function () {
         window.location.hash = hash;
         $(document).on("scroll", onScroll);
       }
