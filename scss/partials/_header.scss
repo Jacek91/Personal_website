@@ -148,8 +148,9 @@
 
   .middle_main_page {
     position: absolute;
-    top: 30%;
-    left: 30%;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
 
     .main_text {
       .home {
@@ -203,13 +204,13 @@
 
   .right_main_page {
     position: absolute;
-    top: 0;
-    left: 92vw;
+    top: 3%;
+    right: 1.5%;
+
 
     .calendar {
       width: 90px;
       height: 110px;
-      margin-top: 30px;
       font-family: "Bree Serif";
       text-align: center;
       color: $fontWhite;
@@ -237,7 +238,7 @@
   .navbar {
     position: fixed;
     top: 25%;
-    right: 3%;
+    right: 2.5%;
     height: 30vh;
 
     .progress_count {
@@ -275,8 +276,8 @@
 
   .header_iconScroll {
     position: fixed;
-    top: 68%;
-    right: 2.5%;
+    top: 65%;
+    right: 2%;
     width: 21px;
 
     .iconScroll_arrow {

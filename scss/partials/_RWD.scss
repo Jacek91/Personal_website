@@ -43,14 +43,6 @@ $smallMobile: "(max-width: 479px)";
 @media #{$fullhd} {
     #homePage {
         font-size: 18px;
-
-        .middle_main_page {
-            left: 34%;
-        }
-    }
-
-    .calendar {
-        margin-left: 35px;
     }
 
     #aboutMe {
@@ -86,29 +78,7 @@ $smallMobile: "(max-width: 479px)";
     }
 }
 
-@media #{$desktopLarge} {
-    #homePage {
-        .middle_main_page {
-            left: 32%;
-        }
-
-        .calendar {
-            margin-left: 20px;
-        }
-    }
-}
-
 @media #{$desktop} {
-    #homePage {
-        .middle_main_page {
-            left: 27%;
-        }
-
-        .calendar {
-            margin-left: 0px;
-        }
-    }
-
     #aboutMe {
         p {
             margin-left: 35px;
@@ -155,15 +125,6 @@ $smallMobile: "(max-width: 479px)";
 }
 
 @media #{$largeTablet} {
-    #homePage {
-        .middle_main_page {
-            left: 21%;
-        }
-
-        .calendar {
-            margin-left: -15px;
-        }
-    }
 
     #aboutMe {
         .about_me_info {
@@ -286,7 +247,6 @@ $smallMobile: "(max-width: 479px)";
 
         .middle_main_page {
             font-size: 14px;
-            left: 25%;
 
             .main_text {
                 .home {
@@ -309,10 +269,6 @@ $smallMobile: "(max-width: 479px)";
                     }
                 }
             }
-        }
-
-        .calendar {
-            margin-left: -35px;
         }
     }
 
@@ -511,20 +467,6 @@ $smallMobile: "(max-width: 479px)";
             }
         }
 
-        .navbar {
-            top: 50%;
-            right: 3%;
-
-            .progress_count {
-                font-size: 12px;
-            }
-        }
-
-        .header_iconScroll {
-            position: absolute;
-            top: 115%;
-            right: -50%;
-        }
 
         .mobile_menu {
             display: block;
@@ -536,8 +478,6 @@ $smallMobile: "(max-width: 479px)";
         }
 
         .middle_main_page {
-            top: 44vw;
-            left: 10vw;
 
             .main_text {
                 .home {
@@ -568,10 +508,9 @@ $smallMobile: "(max-width: 479px)";
         }
 
         .right_main_page {
-            left: 85vw;
 
             .calendar {
-                margin-top: 65px;
+                margin-top: 50px;
                 width: 70px;
                 height: 97px;
 
@@ -590,6 +529,16 @@ $smallMobile: "(max-width: 479px)";
                     font-size: 20px;
                     line-height: 20px;
                 }
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            .header_iconScroll {
+                position: absolute;
+                top: 110%;
+                right: 10%;
             }
         }
     }
@@ -833,22 +782,6 @@ $smallMobile: "(max-width: 479px)";
             }
         }
 
-        .navbar {
-            top: 51%;
-            right: 3%;
-
-            .progress_count {
-                font-size: 8px;
-                left: -5px;
-            }
-        }
-
-        .header_iconScroll {
-            position: absolute;
-            top: 105%;
-            right: -75%;
-        }
-
         .mobile_menu {
             display: block;
 
@@ -859,8 +792,6 @@ $smallMobile: "(max-width: 479px)";
         }
 
         .middle_main_page {
-            top: 50vw;
-            left: 10vw;
 
             .main_text {
                 .home {
@@ -891,10 +822,9 @@ $smallMobile: "(max-width: 479px)";
         }
 
         .right_main_page {
-            left: 83vw;
+            margin-top: 50px;
 
             .calendar {
-                margin-top: 60px;
                 width: 58px;
                 height: 95px;
 
@@ -913,6 +843,17 @@ $smallMobile: "(max-width: 479px)";
                     font-size: 18px;
                     line-height: 20px;
                 }
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            .header_iconScroll {
+                position: absolute;
+                top: 110%;
+                right: 3%;
+                transform: scale(0.8);
             }
         }
     }
